@@ -1,0 +1,30 @@
+plugins {
+    id 'application'
+}
+
+group 'io.github.krakowski'
+version '1.0'
+
+mainClassName = 'io.github.krakowski.beam.Issue'
+
+sourceCompatibility = '11'
+targetCompatibility = '11'
+
+compileJava.options.encoding = 'UTF-8'
+javadoc.options.encoding = 'UTF-8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // Apache Beam
+    implementation 'org.apache.beam:beam-sdks-java-core:2.26.0'
+    implementation 'org.apache.beam:beam-runners-direct-java:2.26.0'
+}
+
+wrapper {
+    gradleVersion = '6.7.1'
+}
+
